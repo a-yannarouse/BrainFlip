@@ -101,7 +101,7 @@ export default function Home() {
               </Typography>
               <SignedOut>
                 <Button color="primary" href='/sign-in'>Login</Button>
-                <Button color="secondary" variant="contained" href='/sign-up'>Sign Up</Button>
+                <Button color="secondary" variant="contained" href='.../sign-up'>Sign Up</Button>
               </SignedOut>
               <SignedIn>
                 <Link href="/flashcards" passHref>

@@ -1,10 +1,12 @@
 'use client'
-import { useUser } from '@clerk/nextjs'
+import { useUser, SignedIn, SignedOut, UserButton  } from '@clerk/nextjs'
+import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
-import { useRouter } from 'next/navigation'
-import { Box, Button, Card, CardActionArea, CardContent, Container, Grid, Typography, AppBar, Toolbar, IconButton, Fab, Stack } from '@mui/material'
+import { useRouter, usePathname } from 'next/navigation'
+import { Box, Button, Card, CardActionArea, CardContent, Container, Grid, 
+    Typography, AppBar, Toolbar, IconButton, Fab, Stack, ThemeProvider, createTheme } from '@mui/material'
 import { UserButton } from '@clerk/nextjs'
 import HomeIcon from '@mui/icons-material/Home'
 import AddIcon from '@mui/icons-material/Add'
@@ -57,6 +59,7 @@ const DeleteButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function Flashcards() {
+    const pathname = usePathname();
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const [isPro, setIsPro] = useState(false)
