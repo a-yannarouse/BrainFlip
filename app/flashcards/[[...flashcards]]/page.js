@@ -1,12 +1,12 @@
 'use client'
-import { useUser, SignedIn, SignedOut, UserButton  } from '@clerk/nextjs'
+import { useUser, SignedIn, SignedOut } from '@clerk/nextjs'
 import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
 import { useRouter, usePathname } from 'next/navigation'
 import { Box, Button, Card, CardActionArea, CardContent, Container, Grid, 
-    Typography, AppBar, Toolbar, IconButton, Fab, Stack, ThemeProvider, createTheme } from '@mui/material'
+    Typography, AppBar, Toolbar, IconButton, Fab, Stack } from '@mui/material'
 import { UserButton } from '@clerk/nextjs'
 import HomeIcon from '@mui/icons-material/Home'
 import AddIcon from '@mui/icons-material/Add'
