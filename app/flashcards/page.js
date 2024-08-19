@@ -311,7 +311,7 @@ export default function Flashcards() {
                         </Grid>
                         <Box sx={{ mt: 'auto' }}>
                             <Typography variant="body2" color="inherit" align="center">
-                                © {new Date().getFullYear()} Brain Flip - A'Yanna Rouse. All rights reserved.
+                                © {new Date().getFullYear()} Brain Flip - A&apos;Yanna Rouse. All rights reserved.
                             </Typography>
                         </Box>
                     </Container>
