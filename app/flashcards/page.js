@@ -248,7 +248,7 @@ export default function Flashcards() {
                         >
                             <Box sx={{ mt: 4, textAlign: 'center', p: 3, backgroundColor: 'white', borderRadius: 2, boxShadow: 1 }}>
                                 <Typography variant="h6" sx={{ mb: 2 }}>
-                                    You don't have any flashcards yet. Let's create your first set!
+                                    You don&apos;t have any flashcards yet. Let&apos;s create your first set!
                                 </Typography>
                                 <Button
                                     variant="contained"
