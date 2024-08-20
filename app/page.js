@@ -60,7 +60,7 @@ export default function Home() {
       const response = await fetch('/api/checkout_session', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'origin': 'http://localhost:3000',
         },
         body: JSON.stringify({ plan: 'pro' }),
       });
