@@ -60,6 +60,7 @@ export async function POST(req){
         
         const checkoutSession = await stripe.checkout.sessions.create(params);
         return NextResponse.json(checkoutSession, { status: 200 });
+        
     } catch (error) {
         console.error('Error creating checkout session:', error);
         return NextResponse.json({ error: { message: error.message } }, { status: 500 });
