@@ -222,7 +222,7 @@ export default function Flashcards() {
                                     <CardActionArea onClick={() => router.push(`/flashcard?id=${flashcard.name}`)} sx={{ flexGrow: 1 }}>
                                         <CardContent>
                                             <Typography variant="h6" sx={{ mb: 2, color: theme.palette.primary.main }}>
-                                                {flashcard.name}
+                                            <CardActionArea onClick={() => router.push(`/flashcard/${flashcard.name}`)} sx={{ flexGrow: 1 }}/>
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
                                                 Click to view this flashcard set

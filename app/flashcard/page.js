@@ -4,7 +4,7 @@ import { useUser } from '@clerk/nextjs'
 import { useEffect, useState } from 'react'
 import { collection, doc, getDocs, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '@/firebase'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import { Box, Button, Card, CardContent, Container, Grid, IconButton, Typography, AppBar, Toolbar } from '@mui/material'
 import { UserButton } from '@clerk/nextjs'
@@ -24,6 +24,8 @@ export default function Flashcard() {
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
     const router = useRouter()
+    const params = useParams()
+    const id = params.id
 
     useEffect(() => {
         async function getFlashCard() {
