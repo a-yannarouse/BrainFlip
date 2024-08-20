@@ -49,9 +49,9 @@ export default function Home() {
 
   const handleStartFlipping = () => {
     if (isSignedIn) {
-      router.push('.../flashcards');
+      router.push('/flashcards');
     } else {
-      router.push('.../sign-up');
+      router.push('/sign-up');
     }
   };
 
@@ -100,11 +100,11 @@ export default function Home() {
                 Brain Flip
               </Typography>
               <SignedOut>
-                <Button color="primary" href='.../sign-in'>Login</Button>
-                <Button color="secondary" variant="contained" href='.../sign-up'>Sign Up</Button>
+                <Button color="primary" href='/sign-in'>Login</Button>
+                <Button color="secondary" variant="contained" href='/sign-up'>Sign Up</Button>
               </SignedOut>
               <SignedIn>
-                <Link href=".../flashcards" passHref>
+                <Link href="/flashcards">
                   <Button color="primary" sx={{ mr: 2 }}>My Flashcards</Button>
                 </Link>
                 <UserButton />

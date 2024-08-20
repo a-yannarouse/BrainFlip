@@ -59,7 +59,6 @@ const DeleteButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function Flashcards() {
-    const pathname = usePathname();
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
     const [isPro, setIsPro] = useState(false)
@@ -102,6 +101,7 @@ export default function Flashcards() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'origin': 'http://localhost:3000'
             },
             body: JSON.stringify({ plan: 'pro' }),
         })
@@ -222,7 +222,7 @@ export default function Flashcards() {
                                     <CardActionArea onClick={() => router.push(`/flashcard?id=${flashcard.name}`)} sx={{ flexGrow: 1 }}>
                                         <CardContent>
                                             <Typography variant="h6" sx={{ mb: 2, color: theme.palette.primary.main }}>
-                                            <CardActionArea onClick={() => router.push(`/flashcard/${flashcard.name}`)} sx={{ flexGrow: 1 }}/>
+                                                {flashcard.name}
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
                                                 Click to view this flashcard set

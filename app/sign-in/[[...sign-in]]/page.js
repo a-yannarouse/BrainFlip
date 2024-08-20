@@ -1,20 +1,7 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { SignIn } from "@clerk/nextjs";
-import { 
-  Box, 
-  Container, 
-  Paper, 
-  Typography, 
-  ThemeProvider, 
-  createTheme,
-  useMediaQuery,
-  CssBaseline,
-  IconButton,
-  Fade
-} from '@mui/material';
-
+import { Box, Container, Paper, Typography, ThemeProvider, createTheme, useMediaQuery, CssBaseline, IconButton, Fade } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import BrainIcon from '@mui/icons-material/Psychology';
 import { useRouter } from "next/navigation";
